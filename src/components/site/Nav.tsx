@@ -40,13 +40,10 @@ export function Nav() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
         <Link
           to="/"
-          className={cn(
-            "font-display text-2xl tracking-tight flex items-center gap-2",
-            transparent ? "text-white" : "text-foreground",
-          )}
+          aria-label="CocoEats Home"
+          className="flex items-center justify-center bg-black rounded-md p-2 h-14 w-14 shadow-md"
         >
-          <span className="inline-block w-2 h-2 rounded-full bg-primary" />
-          Coco<span className="italic font-light">Eats</span>
+          <img src={logo} alt="CocoEats" className="h-full w-full object-contain" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
