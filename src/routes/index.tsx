@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Star, Utensils, Clock, Award } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { Reveal, SectionEyebrow } from "@/components/site/Reveal";
+import landingVideo from "@/assets/landing1.mp4";
 import hero from "@/assets/hero.jpg";
 import dish1 from "@/assets/dish-1.jpg";
 import dish2 from "@/assets/dish-2.jpg";
@@ -47,18 +48,24 @@ function Home() {
       {/* HERO */}
       <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={hero}
-            alt="Cinematic plated dish with steam rising"
-            className="w-full h-full object-cover animate-ken-burns"
-            width={1920}
-            height={1080}
+          <video
+            src={landingVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster={hero}
+            className="w-full h-full object-cover object-center contrast-[1.02] brightness-[1.02] will-change-transform"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/85" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+        {/* Subtle noise/grain overlay to mask compression and improve perceived quality */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-[1] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 bg-black/10 pointer-events-none z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/85 z-[2]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent z-[2]" />
 
-        <div className="relative z-10 h-full mx-auto max-w-7xl px-6 lg:px-10 flex flex-col justify-end pb-20 md:pb-28">
+        <div className="relative z-10 h-full mx-auto max-w-7xl px-6 lg:px-10 flex flex-col justify-end pt-32 pb-20 md:pb-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

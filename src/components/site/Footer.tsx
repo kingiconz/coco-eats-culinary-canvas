@@ -1,15 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Twitter } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
     <footer className="bg-foreground text-background mt-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-20 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="font-display text-3xl flex items-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-primary" />
-            Coco<span className="italic font-light">Eats</span>
-          </div>
+          <Link to="/" className="inline-block -ml-4 mb-4">
+            <img src={logo} alt="CocoEats" className="h-16 w-auto object-contain" />
+          </Link>
           <p className="mt-5 max-w-md text-background/65 leading-relaxed">
             A modern dining experience where seasonal ingredients meet cinematic plating.
             Crafted in the heart of the city — open daily for those who taste with their eyes first.

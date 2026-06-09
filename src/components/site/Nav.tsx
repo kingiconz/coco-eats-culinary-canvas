@@ -41,9 +41,16 @@ export function Nav() {
         <Link
           to="/"
           aria-label="CocoEats Home"
-          className="flex items-center justify-center bg-black rounded-md p-2 h-14 w-14 shadow-md"
+          className="flex items-center -ml-8"
         >
-          <img src={logo} alt="CocoEats" className="h-full w-full object-contain" />
+          <img
+            src={logo}
+            alt="CocoEats"
+            className={cn(
+              "h-20 w-auto object-contain transition-all duration-500",
+              !transparent && "brightness-0",
+            )}
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
