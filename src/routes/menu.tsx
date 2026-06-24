@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Plus, Star } from "lucide-react";
+import { Search, Plus, Star, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Layout } from "@/components/site/Layout";
 import { Reveal, SectionEyebrow } from "@/components/site/Reveal";
+import menuPdf from "@/assets/coco-eats-menu.pdf.asset.json";
 import dish1 from "@/assets/dish-1.jpg";
 import dish2 from "@/assets/dish-2.jpg";
 import dish3 from "@/assets/dish-3.jpg";
@@ -263,6 +264,16 @@ function MenuPage() {
             <p className="mt-8 text-muted-foreground text-lg max-w-xl mx-auto">
               From sunrise plates to midnight pours — every dish honors the season and the maker.
             </p>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <a
+              href={menuPdf.url}
+              download="coco-eats-menu.pdf"
+              className="mt-10 inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-full text-xs uppercase tracking-[0.2em] hover:bg-foreground/90 transition-colors shadow-luxe"
+            >
+              <Download size={16} />
+              Download Full Menu (PDF)
+            </a>
           </Reveal>
         </div>
       </section>
