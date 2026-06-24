@@ -265,6 +265,16 @@ function MenuPage() {
               From sunrise plates to midnight pours — every dish honors the season and the maker.
             </p>
           </Reveal>
+          <Reveal delay={0.3}>
+            <a
+              href={menuPdf.url}
+              download="coco-eats-menu.pdf"
+              className="mt-10 inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-full text-xs uppercase tracking-[0.2em] hover:bg-foreground/90 transition-colors shadow-luxe"
+            >
+              <Download size={16} />
+              Download Full Menu (PDF)
+            </a>
+          </Reveal>
         </div>
       </section>
 
