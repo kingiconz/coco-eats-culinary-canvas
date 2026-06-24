@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Plus, Star } from "lucide-react";
+import { Search, Plus, Star, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Layout } from "@/components/site/Layout";
 import { Reveal, SectionEyebrow } from "@/components/site/Reveal";
+import menuPdf from "@/assets/coco-eats-menu.pdf.asset.json";
 import dish1 from "@/assets/dish-1.jpg";
 import dish2 from "@/assets/dish-2.jpg";
 import dish3 from "@/assets/dish-3.jpg";
